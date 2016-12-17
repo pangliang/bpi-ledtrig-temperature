@@ -20,5 +20,9 @@
 	```bash
 	$ sudo bash -c 'echo "cpu_temp" >/sys/class/leds/green_leds/trigger'
 	```
+6. 跑个sysbench 压一压, 让温度升高:
 
+	```bash
+	$ sysbench --test=cpu --num-threads=8 --cpu-max-prime=100000 run
+	```
 
